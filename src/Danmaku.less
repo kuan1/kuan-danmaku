@@ -1,0 +1,40 @@
+@keyframes danmakuRun {
+  form {
+    transform: translate3d(300px, 0, 0);
+  }
+  to {
+    transform: translate3d(-100%, 0, 0);
+  }
+}
+
+.danmaku-container {
+  margin: 0 auto;
+  width: 90%;
+  height: 310px;
+  position: relative;
+  background: #f5f5f5; // todo
+  overflow: hidden;
+}
+.danmaku-wrap {
+  height: 100%;
+  min-width: 100%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+  transform: translate3d(300px, 0, 0);
+  position: absolute;
+  &.danmaku-run {
+    animation-name: danmakuRun;
+    animation-timing-function: linear;
+    // animation-duration: 100s;
+    animation-iteration-count: infinite;
+  }
+}
+.danmaku-item {
+  background: #1da57a;
+  color: white;
+  position: absolute;
+  padding: 0 10px;
+}
